@@ -1,0 +1,474 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>COVID-19 project</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+
+<!-- WRAPPER -->
+<div class="container-fluid" style="height: 100vh; padding: 0;">
+    <!-- HEADING -->
+    <div class="header">
+        <div class="align-self-center">
+            <h1>COVID 19: THE INEQUALITY VIRUS </h1>
+            <h3>Who has been hit the hardest by the pandemic around the world, and why?</h3>
+            <h6> A Data Story by Minjue Wu, Workneh Jano, and Jonathan Zhang</h6>
+            <br>
+            <div class="row">
+                <div class="col-6 offset-3" id="background-box">
+                    <p> COVID-19 has been the world's leading infectious killer,
+                        taking away over 6 million lives from its inception to
+                        the present day since the outbreak first started in 2019
+                        in Wuhan, China. After the WHO declared it a global
+                        pandemic in March 2020, the whole world was thrown into
+                        disarray, but not all countries or populations suffered
+                        to the same extent. The lived experience of those impacted
+                        by COVID drastically varied from school to school, state to
+                        state, and country to country. Throughout the past two years,
+                        while many developed Western countries have seemingly
+                        returned to pre-pandemic "normalcy", there are communities
+                        who have and continue to face disproportionate adverse
+                        consequences. This is a story about how COVID-19 became
+                        the inequality virus, told in chronological order by its
+                        causes and impact: Past (GDP), Present (Incarceration Healthcare
+                        Access), and Future (Education Disruptions).
+                    </p>
+                </div>
+                <br>
+            </div>
+        </div>
+    </div>
+    <div class="header" id="past">
+        <div class="align-self-center">
+            <h1>SECTION I: Ghosts from the Past</h1>
+            <h3>GDP and Vaccine Access Inequality Bar Nations from Preventative Care</h3>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-8 offset-2">
+            <div class="row">
+                <p></p>
+                <p> For many countries, the unequal health outcomes from the pandemic came from
+                    poor resources and infrastructure that started long before the virus broke out.
+                    Not all countries had access to the same networks, finances, and supply chains
+                    to respond to COVID. Lower income countries in particular, left from decades of
+                    imperialist exploitation by Europe and the Americas, created great disparities
+                    in Gross Domestic Product (GDP) and lack of preventative resources like vaccines
+                    due to neoliberalism. </p>
+                <p style="font-style: italic"> Take a look at the following scatterplot, which shows the
+                    relationships between nations' GDPs and the total number of COVID vaccines (initial shot boosters, etc.)
+                    obtained by their citizens. What do you notice?
+                </p>
+            </div>
+
+            <div class="row lineRow">
+                <div id="lineDiv"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-8 offset-2">
+            <p></p>
+            <p> It looks like GDP per capita positively correlates with vaccinations per 100 citizens
+            in every region. This makes sense, since the higher resources you have per citizen, the
+            better infrastructure you will have for purchasing larger quantities of vaccines and
+            distributing them. </p>
+            <p></p>
+            <p style="font-style: italic">Let's now take a closer look at the distribution of the varieties of vaccines available
+            to countries in each WHO region.</p>
+            <p></p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-8 offset-2">
+            <div class="row" style="padding: 1vh">
+                <div class="col-3">
+                    <table class="table">
+                        <thead class="thead-dark">
+                        <tr>
+                            <th colspan="3" scope="row" id="countryid"> Hover over a country data point!
+                                This will allow one to see the variety of vaccines as well as the number
+                                of vaccinated in the region. Unsurprisingly, countries in the global north
+                                with high GDP per capita are much more able to vaccinate their citizens.</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>WHO Region</td>
+                            <td id="whoregion">...</td>
+                        </tr>
+                        <tr>
+                            <td># vaccines types used</td>
+                            <td id="numvaxused"> ...</td>
+                        </tr>
+                        <tr>
+                            <td># of Vaccinated</td>
+                            <td id="numvaccinated">...</td>
+                        </tr>
+                        <tr>
+                            <td>Vaccines used</td>
+                            <td id="vaccinesused">...</td>
+
+                        </tr>
+                        <tr>
+                            <td>GDP Per Capita</td>
+                            <td id="gdppc">...</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-9">
+                    <div id="boxDiv"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-8 offset-2">
+            <div class="row">
+                <p></p>
+                <p> As you can see, the regions with the highest GDP per Capita, like
+                the Eastern Mediterranean countries, the European countries, and the Americas
+                also have some of the highest average number of vaccine types. By contrast,
+                countries in Africa and the Western Pacific, where most of the vaccines are produced by
+                human labor and factories, have both the lowest GDP per capita and
+                the lowest access to the total number of vaccines and the types of vaccines
+                available. </p>
+
+                <p>What does this mean for COVID inequality? Due to the vaccine being developed and primarily distributed
+                    to high-income countries, many low-income countries are left with
+                    little access to diverse vaccines. With supply chain difficulties, especially with the
+                    transportation and storage of vaccines, countries that are far away from ports and trade
+                    networks as well as those that are fewer resources have a much more difficult time procuring
+                    the vaccines. Lower GDP per capita countries thus need help with both financial support and
+                    infrastructure building to attain the same level of vaccination protection as their higher
+                    GDP counterparts.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row key">
+        <div class="col-10 offset-1">
+            <div class="row">
+                <br>
+                <h3>Key Takeaway #1: Countries with lower GDPs don't benefit from the vaccines they produce.
+                    They need financial support to purchase and distribute higher quantity
+                    and types of vaccines. </h3>
+                <br>
+            </div>
+        </div>
+    </div>
+
+    <div class="header" id="present">
+        <div class="align-self-center">
+            <h1>SECTION II: Impacts on the Present</h1>
+            <h3>Incarceration Healthcare Access and Mobility Impairment</h3>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-8 offset-2">
+            <div class="row">
+                <p></p>
+                <p> Since economic inequalities exacerbate COVID outcomes, what does it mean for
+                    vulnerable populations in a single country? Let's first take a look at
+                    the disparate outcomes in COVID survival and infection rates for one of the most
+                    underserved communities in the U.S.: the incarcerated. </p>
+                <p> Incarcerated individuals face an uphill battle as much of their rights are stripped away and have less access to good
+                    healthcare. Without great resources for health prospects, it makes it much more likely for those
+                    to not be vaccinated or to face higher mortality rates compared to the rest of the population as
+                    their overall health is subpar compared to control groups. Let's see how the inmates
+                    and prison staff fare in each state based on the state GDP. </p>
+                <p style="font-style: italic"> Select from the dropdown box below to display the total deaths and cases
+                    of inmates, prison staff, or all prison occupants by each state. The color of the
+                    state indicates the state's GDP per capita. Finally, the top 5 states for the selected metric will display
+                    the number of cases and deaths via a pie chart, with the pie chart size corresponding to the size of the
+                    number of cases compared to all cases across the states.</p>
+                <p></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mapSec">
+        <div class="col-10 offset-1 offSet">
+            <div class="row">
+                <div class="col-12">
+                    <div class="row justify-content-center" >
+                        <div style="font-size: 25px; font-weight:bold">Select your category: </div>
+                        <select id='categorySelector' class="custom-select align-self-center" style="width: 25%" onchange="categoryChange()">
+                            <option value="totalCases,totalDeaths">Total Inmate Cases & Deaths</option>
+                            <option value="staff_totalCases,staff_totalDeaths">Total Staff Cases & Deaths</option>
+                            <option value="totPrisonCase,totprisonDeath">Total prison cases and Deaths</option>
+                        </select>
+                    </div>
+                    <div class="row mapRow">
+                        <div id="mapDiv"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-8 offset-2">
+            <div class="row">
+                <p></p>
+                <p> As you probably noticed, COVID disparities are strongly correlated with low income/GDP
+                    and are felt most strongly by the politically vulnerable. From exploring the map,
+                    you will notice that a higher death ratio to cases is often found in less-resourced states,
+                    whereas states with the highest GDP per capita tend to have the lowest percentage of
+                    deaths per infection. </p>
+                <p></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row key">
+        <div class="col-10 offset-1">
+            <div class="row">
+                <br>
+                <h3>Key Takeaway #2: Within each country, those with the least political power
+                    and access to healthcare like the incarcerated need access to treatment
+                    to reduce disproportionate harm suffered from contracting COVID. </h3>
+                <br>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-8 offset-2">
+            <div class="row">
+                <p></p>
+                <p> Now that we've looked at what happens to those who have little ability
+                to access healthcare because of isolation and limited movement, we wonder:
+                how are various countries dealing with the problem of isolation and
+                decreased mobility during the pandemic?</p>
+                <p style="font-style: italic"> Interact with the globe below to see various countries' mobility during
+                COVID. Orange indicates greater/more frequent human presence compared to
+                pre-COVID times, while purple indicates a reduction in movement. This particular
+                globe is showing average mobility changes to grocery stores and pharmacies.
+                Drag the slider at the bottom to see how the mobility changes from one
+                period of the pandemic to another. What do you observe?</p>
+                <p></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-10 offset-1">
+            <div class="row align-self-center">
+                <div class="col-12">
+                    <div id="globeDiv" style="height:500px"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div id="brushDiv" style="height:100px"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-8 offset-2">
+            <div class="row">
+                <p></p>
+                <p> Interestingly, the countries with higher GDPs seem to experience a greater
+                DECREASE in movement — this indicates to us that people are able to survive
+                by obtaining their goods and medicines remotely, whereas those who are in less
+                resourced areas have to risk COVID exposure to survive. </p>
+                <p></p>
+            </div>
+        </div>
+    </div>
+    <div class="row key">
+        <div class="col-10 offset-1">
+            <div class="row">
+                <br>
+                <h3>Key Takeaway #3: Countries in the global South tended to see the greatest
+                    decrease in ability to avoid visiting groceries and pharmacies in person,
+                    indicating a need for decentralizing resources to make survival necessities accessible. </h3>
+                <br>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="header" id="future">
+        <div class="align-self-center">
+            <h1>SECTION III: Pandemic Effects into the Future</h1>
+            <h3>Education Disruption Across the World</h3>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-8 offset-2">
+            <div class="row">
+                <p></p>
+                <p> As we consider the ways in which COVID has already disproportionately affected
+                    different populations, one of the longest lasting impacts we can expect
+                    is the worldwide disruptions to student learning. Obtaining a quality education
+                    is one of the most powerful sources of upward socioeconomic mobility, and lower
+                    education is linked to incarceration and lower lifetime earnings, resulting in a
+                    vicious cycle of lower resources, crime, inability to afford healthcare.
+                    The degree to which students have been affected is positively correlated with a country's
+                    development index: The most impacted students from the global south have attendance rates
+                    of less than half of all school-aged children. </p>
+                <p style="font-style: italic"> Click through to see which countries under
+                    which categories have the worst attendance performance. </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-10 offset-1" >
+            <!-- CONTENT -->
+            <div class="row">
+                <div class="col-6">
+                        <div id="barDiv"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-8 offset-2" >
+
+            <div class="row d-flex justify-content-center">
+                <p> In the bar graph, one can see that the United States ranks relatively high in attendance rates
+                compared to the rest of the world, but ranks middle of the pack compared to other developed
+                nations. Those that are the most impacted by attendance rates from COVID are those in the
+                African Continent and South East Asia.</p>
+                <p>Knowledge is power and many of the most impacted communities are those with the least amount of
+                    political influence and voice in society. Many lower-income countries do not have enough collective
+                    bargaining power. Students are at a vulnerable age where they cannot vote and advocate for
+                    themselves. Incarcerated individuals are often disenfranchised and many people are oblivious to
+                    their plight. It is only by understanding the severity of the situation and advocating for others
+                    can it is possible to enact top-down change and guarantee that everyone had a voice.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row key">
+        <div class="col-10 offset-1">
+            <div class="row">
+                <br>
+                <h3>Key Takeaway #4: COVID disruptions most heavily impacted countries with the
+                    lowest development indices; these countries need additional educational support
+                    to catch their students up to the rest of the world. </h3>
+                <br>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="header" id="conclusions">
+        <div class="align-self-center">
+            <h1>RECOMMENDATIONS FOR THE FUTURE</h1>
+        </div>
+    </div>
+
+    <div class="row" >
+        <div class="col-10 offset-1">
+            <!-- CONTENT -->
+            <div class="row">
+                <div class="col-12">
+                    <p></p>
+                    <p> While we see the majority of the United States and many of the developed countries in the world
+                        return to a semblance of normalcy, there are those who are still disproportionately impacted by the pandemic.
+                        Incarcerated persons, citizens of middle and low-income countries, and students in primary
+                        school are the most impacted in terms of survival rates, access to vaccines, and attendance in
+                        schools. These all intersect with one another and create a compounded negative effect that far
+                        outlasts the duration of the pandemic.</p>
+                    <p> To address the inequities from the COVID-19 pandemic, we must address all three levels of
+                        causes and impact, past, present and future, to stop a cycle of vulnerable countries and
+                        populations from becoming even more harmed. </p>
+
+                    <h5>Firstly, we must focus on building infrastructures
+                        for buying and distributing vaccines in countries with low GDP.</h5>
+                    <br>
+                    <h5>Secondly, we must address
+                        health gaps for people with low mobility like incarcerated individuals to prevent them
+                        from being disproportionately harmed by lack of healthcare access.</h5>
+                    <br>
+                    <h5>Finally, we must share
+                        knowledge and educational sources across the global South in order to help countries develop
+                        their youth to fight the next pandemic.</h5>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row" >
+        <div class="col-10 offset-1">
+            <div class="ender" id="about-us">
+                <div class="align-self-center">
+                    <br>
+                    <h3>About Us</h3>
+                    <p> We are Minjue Wu (Team leader), Workneh Jano, and Jonathan Zhang are three Harvard undergraduates. As a group,
+                        we have backgrounds in the History of Medicine, Social Studies, Political Science, Molecular and
+                        Cellular Biology, and Computer Science, and we explored how the COVID pandemic has been felt differently by populations around the
+                        world. We are especially interested in capturing the experiences of the most vulnerable
+                        and marginalized demographics, including children (disruptions in education), the
+                        incarcerated (healthcare provision in prison), and just in general how the pandemic
+                        has impacted mobility to resources like groceries or the pharmacy. Our goal is to highlight
+                        how COVID disproportionately impacts those who are the "Without (resources)",
+                        and those with low social mobility and/or socioeconomic status. We are motivated by how
+                        different we are pandemic experiences are compared to our family members in our native countries of
+                        China and Ethiopia, which all have differing levels of resources and infrastructures of care compared
+                        to our current base in the United States. We hope this project will help others analyze how
+                        the pandemic has impacted issues of equity and social justice from a healthcare or political
+                        science perspective.  </p>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<!-- - - - - - - - - - - - >
+<    Load JS libraries     >
+<- - - - - - - - - - - - -->
+
+<!-- BOOTSTRAP -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+<!-- d3 -->
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://d3js.org/d3-array.v2.min.js"></script>
+<script src="https://d3js.org/d3-geo.v2.min.js"></script>
+
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+<script src="https://d3js.org/topojson.v2.min.js"></script>
+<script src="https://d3js.org/d3-geo.v1.min.js"></script>
+
+<!-- OWN JS -->
+<script src="js/processHelper.js"></script>
+<script src="js/lineVis.js"></script>
+<script src="js/mapVis.js"></script>
+<script src="js/boxVis.js"></script>
+<script src="js/globeVis.js"></script>
+<script src="js/brushVis.js"></script>
+<script src="js/barVis.js"></script>
+<script src="js/project_main.js"></script>
+</body>
+</html>
